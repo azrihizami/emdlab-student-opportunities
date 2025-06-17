@@ -79,13 +79,13 @@
         }
         
         .lab-logo {
-            width: 60px;
-            height: 60px;
+            width: 80px;  /* Increase from 60px */
+                height: 80px; /* Increase from 60px */
         }
-        
+
         .university-logo {
-            width: 50px;
-            height: 50px;
+            width: 70px;  /* Increase from 50px */
+            height: 70px; /* Increase from 50px */
         }
         
         .logo-text {
@@ -141,10 +141,11 @@
         }
         
         .hero-section {
-            background: linear-gradient(135deg, rgba(44, 62, 80, 0.95) 0%, rgba(52, 73, 94, 0.9) 100%),
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><rect fill="%232c3e50" width="1920" height="1080"/><circle fill="%23e74c3c" cx="400" cy="300" r="3" opacity="0.1"/><circle fill="%23e74c3c" cx="1200" cy="600" r="2" opacity="0.08"/><circle fill="%233498db" cx="800" cy="200" r="2" opacity="0.1"/><circle fill="%233498db" cx="1400" cy="400" r="3" opacity="0.06"/><path stroke="%23ffffff" stroke-width="1" fill="none" d="M200,500 Q600,300 1000,500 T1600,500" opacity="0.05"/></svg>');
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.8) 0%, rgba(52, 73, 94, 0.7) 100%),
+                        url('images/hero-background.jpg');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             color: white;
             padding: 100px 0;
             text-align: center;
@@ -411,6 +412,7 @@
             border: 4px solid rgba(255, 255, 255, 0.2);
             position: relative;
             z-index: 2;
+            overflow: hidden; /* Add this line */
         }
         
         .profile-name {
@@ -880,28 +882,20 @@
     <header>
         <nav class="container">
             <div class="logo-container">
-                <div class="logo-item">
-                    <div class="logo-image lab-logo">
-                        <img src="images/emdlab-logo.png" alt="EMDLab Logo">
-                    </div>
-                    <div>
-                        <div class="logo-text">EMDLab</div>
-                        <div class="logo-subtitle">Research Opportunities</div>
-                    </div>
-                </div>
-                
-                <div class="divider"></div>
-                
-                <div class="logo-item">
-                    <div class="logo-image university-logo">
-                        <img src="images/umpsa-logo.png" alt="UMPSA Logo">
-                    </div>
-                    <div>
-                        <div class="logo-text" style="font-size: 1.2rem;">UMPSA</div>
-                        <div class="logo-subtitle" style="font-size: 0.8rem;">University</div>
-                    </div>
-                </div>
-            </div>
+    <div class="logo-item">
+        <div class="logo-image lab-logo">
+            <img src="images/emdlab-logo.png" alt="EMDLab Logo">
+        </div>
+    </div>
+    
+    <div class="divider"></div>
+    
+    <div class="logo-item">
+        <div class="logo-image university-logo">
+            <img src="images/umpsa-logo.png" alt="UMPSA Logo">
+        </div>
+    </div>
+</div>
             <ul class="nav-menu">
                 <li><a href="#projects">Research Projects</a></li>
                 <li><a href="#supervisor">Supervisor</a></li>
@@ -938,28 +932,28 @@
                     <div class="project-icon">🔧</div>
                     <h3>Motor Design and Prototyping</h3>
                     <p>Design, simulate, and build innovative electric motors using advanced FEA tools and hands-on manufacturing. Work with cutting-edge design software and prototyping equipment to create next-generation motor technologies.</p>
-                    <a href="#" class="project-link">View Project Details</a>
+                    <a href="https://link.springer.com/article/10.1007/s00202-025-03129-0" target="_blank" class="project-link">Example of Project</a>
                 </div>
                 
                 <div class="project-card">
                     <div class="project-icon">🌡️</div>
                     <h3>Thermal Study of Motors</h3>
                     <p>Investigate heat generation, distribution, and cooling strategies in electric motors. Use thermal imaging, CFD analysis, and experimental testing to optimize motor thermal performance and reliability.</p>
-                    <a href="#" class="project-link">View Project Details</a>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/8477122/" target="_blank" class="project-link">Example of Project</a>
                 </div>
                 
                 <div class="project-card">
                     <div class="project-icon">🔊</div>
                     <h3>Vibroacoustics Study of Motors</h3>
                     <p>Analyze noise, vibration, and harshness (NVH) in electric motors. Conduct acoustic measurements, modal analysis, and develop noise reduction strategies for quieter motor operation.</p>
-                    <a href="#" class="project-link">View Project Details</a>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/8755241" target="_blank" class="project-link">Example of Project</a>
                 </div>
                 
                 <div class="project-card">
                     <div class="project-icon">⚡</div>
                     <h3>Drives and Power Electronics</h3>
                     <p>Develop advanced motor control systems, variable frequency drives, and power electronic circuits. Work with modern control algorithms and high-power semiconductor devices.</p>
-                    <a href="#" class="project-link">View Project Details</a>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/8949689" target="_blank" class="project-link">Example of Project</a>
                 </div>
             </div>
         </div>
@@ -975,7 +969,9 @@
             <div class="supervisor-content">
                 <div class="supervisor-image">
                     <div class="profile-card">
-                        <div class="profile-avatar">👨‍🔬</div>
+                        <div class="profile-avatar">
+                            <img src="images/azri-photo.png" alt="Your Name" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                        </div>
                         <h3 class="profile-name">Dr. Mohd Azri Hizami RASID</h3>
                         <p class="profile-title">Principal Research | EMDLab </p>
                         <div class="profile-links">
