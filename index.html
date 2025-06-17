@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join EMDLab Research Team | Student Opportunities</title>
+    <meta name="description" content="Join EMDLab for postgraduate research, internships, and FYP projects in electromagnetic design, thermal studies, vibroacoustics, and power electronics.">
+    <style>
+        * {
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-image {
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+        }
+        
+        .logo-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .lab-logo {
+            width: 60px;
+            height: 60px;
+        }
+        
+        .university-logo {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .logo-subtitle {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: 400;
+        }
+        
+        .divider {
+            width: 2px;
+            height: 40px;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            border-radius: 1px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-menu a:hover {
+            color: #e74c3c;
+        }
+        
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #e74c3c;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.95) 0%, rgba(52, 73, 94, 0.9) 100%),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><rect fill="%232c3e50" width="1920" height="1080"/><circle fill="%23e74c3c" cx="400" cy="300" r="3" opacity="0.1"/><circle fill="%23e74c3c" cx="1200" cy="600" r="2" opacity="0.08"/><circle fill="%233498db" cx="800" cy="200" r="2" opacity="0.1"/><circle fill="%233498db" cx="1400" cy="400" r="3" opacity="0.06"/><path stroke="%23ffffff" stroke-width="1" fill="none" d="M200,500 Q600,300 1000,500 T1600,500" opacity="0.05"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.8rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #ffffff, #ecf0f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-content .subtitle {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .cta-button {
+            background: #e74c3c;
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+        }
+        
+        .cta-button:hover {
+            background: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(231, 76, 60, 0.6);
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+        
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+        
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            border-radius: 2px;
+        }
+        
+        .section-header p {
+            font-size: 1.3rem;
+            color: #5a6c7d;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        .projects-section {
+            background: #f8f9fa;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-card:nth-child(2)::before {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+        }
+        
+        .project-card:nth-child(3)::before {
+            background: linear-gradient(135deg, #27ae60, #16a085);
+        }
+        
+        .project-card:nth-child(4)::before {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+        }
+        
+        .project-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+        }
+        
+        .project-card:nth-child(2) .project-icon {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            box-shadow: 0 8px 25px rgba(243, 156, 18, 0.3);
+        }
+        
+        .project-card:nth-child(3) .project-icon {
+            background: linear-gradient(135deg, #27ae60, #16a085);
+            box-shadow: 0 8px 25px rgba(39, 174, 96, 0.3);
+        }
+        
+        .project-card:nth-child(4) .project-icon {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            box-shadow: 0 8px 25px rgba(155, 89, 182, 0.3);
+        }
+        
+        .project-card h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .project-card p {
+            color: #5a6c7d;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .project-link {
+            background: #f8f9fa;
+            color: #2c3e50;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 2px solid #e9ecef;
+        }
+        
+        .project-link:hover {
+            background: #e74c3c;
+            color: white;
+            border-color: #e74c3c;
+            transform: translateY(-2px);
+        }
+        
+        .supervisor-section {
+            background: white;
+        }
+        
+        .supervisor-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .supervisor-image {
+            position: relative;
+        }
+        
+        .profile-card {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .profile-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle fill="%23e74c3c" cx="200" cy="200" r="2" opacity="0.1"/><circle fill="%23e74c3c" cx="800" cy="800" r="3" opacity="0.08"/><circle fill="%233498db" cx="300" cy="700" r="2" opacity="0.1"/><circle fill="%233498db" cx="700" cy="300" r="2" opacity="0.06"/></svg>');
+            animation: float 20s infinite linear;
+        }
+        
+        @keyframes float {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 3rem;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .profile-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .profile-title {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .profile-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .profile-link {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .profile-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .supervisor-info h3 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+        }
+        
+        .research-highlights {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .highlight-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #e74c3c;
+            transition: all 0.3s ease;
+        }
+        
+        .highlight-item:hover {
+            background: #e8f4f8;
+            transform: translateX(5px);
+        }
+        
+        .highlight-item h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight-item p {
+            color: #5a6c7d;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .opportunities-section {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+        }
+        
+        .opportunities-section .section-header h2,
+        .opportunities-section .section-header p {
+            color: white;
+        }
+        
+        .opportunities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+        
+        .opportunity-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .opportunity-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .opportunity-icon {
+            width: 80px;
+            height: 80px;
+            background: #e74c3c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.4);
+        }
+        
+        .opportunity-card:nth-child(2) .opportunity-icon {
+            background: #f39c12;
+            box-shadow: 0 10px 30px rgba(243, 156, 18, 0.4);
+        }
+        
+        .opportunity-card:nth-child(3) .opportunity-icon {
+            background: #27ae60;
+            box-shadow: 0 10px 30px rgba(39, 174, 96, 0.4);
+        }
+        
+        .opportunity-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .opportunity-card p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .opportunity-link {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .opportunity-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .application-section {
+            background: #f8f9fa;
+            text-align: center;
+        }
+        
+        .application-form {
+            background: white;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 4rem;
+            border-radius: 20px;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.1);
+            border: 2px solid #e9ecef;
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .form-header h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .form-header p {
+            color: #5a6c7d;
+            font-size: 1.1rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1rem;
+        }
+        
+        .required {
+            color: #e74c3c;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            background: #ffffff;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #e74c3c;
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        
+        .checkbox-group label {
+            margin-bottom: 0;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(231, 76, 60, 0.4);
+        }
+        
+        .submit-btn:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .success-message {
+            display: none;
+            background: linear-gradient(135deg, #d4edda, #c3e6cb);
+            color: #155724;
+            padding: 3rem;
+            border-radius: 15px;
+            border: 1px solid #c3e6cb;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #27ae60;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(39, 174, 96, 0.3);
+        }
+        
+        .contact-section {
+            background: #1a252f;
+            color: white;
+            text-align: center;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: #e74c3c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        .contact-item h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item p {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        footer {
+            background: #0d1419;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-bottom {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #e74c3c;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+            font-size: 1.5rem;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: #c0392b;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(231, 76, 60, 0.6);
+        }
+        
+        @media (max-width: 768px) {
+            .projects-grid,
+            .supervisor-content,
+            .opportunities-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .form-row,
+            .research-highlights {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+            
+            .container {
+                padding: 0 20px;
+            }
+            
+            .nav-menu {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .profile-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .application-form {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <div class="logo-item">
+                    <div class="logo-image lab-logo">
+                        <img src="images/emdlab-logo.png" alt="EMDLab Logo">
+                    </div>
+                    <div>
+                        <div class="logo-text">EMDLab</div>
+                        <div class="logo-subtitle">Research Opportunities</div>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="logo-item">
+                    <div class="logo-image university-logo">
+                        <img src="images/umpsa-logo.png" alt="UMPSA Logo">
+                    </div>
+                    <div>
+                        <div class="logo-text" style="font-size: 1.2rem;">UMPSA</div>
+                        <div class="logo-subtitle" style="font-size: 0.8rem;">University</div>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#projects">Research Projects</a></li>
+                <li><a href="#supervisor">Supervisor</a></li>
+                <li><a href="#opportunities">Opportunities</a></li>
+                <li><a href="#apply">Apply Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Join EMDLab Research</h1>
+                <p class="subtitle">Advance your career in electromechanical engineering through cutting-edge research in motor design, thermal studies, vibroacoustics, and power electronics at Universiti Malaysia Pahang Al-Sultan Abdullah</p>
+                
+                <div class="hero-cta">
+                    <a href="#apply" class="cta-button">Apply Now</a>
+                    <a href="#projects" class="cta-button cta-secondary">Explore Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Research Projects</h2>
+                <p>Explore our four main research areas and discover the exciting projects available for students</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">🔧</div>
+                    <h3>Motor Design and Prototyping</h3>
+                    <p>Design, simulate, and build innovative electric motors using advanced FEA tools and hands-on manufacturing. Work with cutting-edge design software and prototyping equipment to create next-generation motor technologies.</p>
+                    <a href="#" class="project-link">View Project Details</a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-icon">🌡️</div>
+                    <h3>Thermal Study of Motors</h3>
+                    <p>Investigate heat generation, distribution, and cooling strategies in electric motors. Use thermal imaging, CFD analysis, and experimental testing to optimize motor thermal performance and reliability.</p>
+                    <a href="#" class="project-link">View Project Details</a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-icon">🔊</div>
+                    <h3>Vibroacoustics Study of Motors</h3>
+                    <p>Analyze noise, vibration, and harshness (NVH) in electric motors. Conduct acoustic measurements, modal analysis, and develop noise reduction strategies for quieter motor operation.</p>
+                    <a href="#" class="project-link">View Project Details</a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-icon">⚡</div>
+                    <h3>Drives and Power Electronics</h3>
+                    <p>Develop advanced motor control systems, variable frequency drives, and power electronic circuits. Work with modern control algorithms and high-power semiconductor devices.</p>
+                    <a href="#" class="project-link">View Project Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section supervisor-section" id="supervisor">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Your Research Supervisor</h2>
+                <p>Learn about our research expertise and connect with our professional networks</p>
+            </div>
+            
+            <div class="supervisor-content">
+                <div class="supervisor-image">
+                    <div class="profile-card">
+                        <div class="profile-avatar">👨‍🔬</div>
+                        <h3 class="profile-name">Dr. Research Leader</h3>
+                        <p class="profile-title">Principal Research Scientist | EMDLab Director</p>
+                        <div class="profile-links">
+                            <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_PROFILE" target="_blank" class="profile-link">LinkedIn</a>
+                            <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" class="profile-link">Google Scholar</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="supervisor-info">
+                    <h3>Research Excellence & Mentorship</h3>
+                    <p style="margin-bottom: 2rem; color: #5a6c7d; line-height: 1.7;">With over 15 years of experience in electromagnetic design and motor technology, our research team provides world-class mentorship and cutting-edge research opportunities. Our students have published in top-tier journals and secured positions at leading technology companies worldwide.</p>
+                    
+                    <div class="research-highlights">
+                        <div class="highlight-item">
+                            <h4>50+ Publications</h4>
+                            <p>High-impact research in IEEE, Elsevier, and Springer journals</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h4>25+ Patents</h4>
+                            <p>Innovative motor technologies and control systems</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h4>Industry Collaboration</h4>
+                            <p>Active partnerships with leading motor manufacturers</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h4>International Recognition</h4>
+                            <p>IEEE Fellow and multiple research awards</p>
+                        </div>
+                    </div>
+                    
+                    <p style="color: #5a6c7d; font-style: italic;">Connect with us on LinkedIn and explore our latest research publications on Google Scholar to see the breadth and impact of our work.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section opportunities-section" id="opportunities">
+        <div class="container">
+            <div class="section-header">
+                <h2>Student Opportunities</h2>
+                <p>Choose the path that best fits your academic goals and career aspirations</p>
+            </div>
+            
+            <div class="opportunities-grid">
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">🎓</div>
+                    <h3>Postgraduate Research</h3>
+                    <p>Master's and PhD programs with full research support, scholarship opportunities, and publication guidance in our specialized research areas.</p>
+                    <a href="#apply" class="opportunity-link">Apply for Masters/PhD</a>
+                </div>
+                
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">💼</div>
+                    <h3>Research Internship</h3>
+                    <p>3-6 month intensive research experience with stipend, hands-on training, and industry exposure in state-of-the-art facilities.</p>
+                    <a href="#apply" class="opportunity-link">Apply for Internship</a>
+                </div>
+                
+                <div class="opportunity-card">
+                    <div class="opportunity-icon">🔬</div>
+                    <h3>Final Year Projects</h3>
+                    <p>Capstone project supervision with access to advanced equipment, expert guidance, and potential for conference publications.</p>
+                    <a href="#apply" class="opportunity-link">Apply for FYP</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section application-section" id="apply">
+        <div class="container">
+            <div class="section-header">
+                <h2>Apply to Join EMDLab</h2>
+                <p>Start your research journey with us by submitting your application</p>
+            </div>
+            
+            <div class="application-form">
+                <div class="form-header">
+                    <h3>Student Application Form</h3>
+                    <p>Fill out this form to express your interest in joining our research team</p>
+                </div>
+                
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="applicationForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name <span class="required">*</span></label>
+                            <input type="text" id="firstName" name="first_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name <span class="required">*</span></label>
+                            <input type="text" id="lastName" name="last_name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="nationality">Nationality</label>
+                            <input type="text" id="nationality" name="nationality">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="university">University/Institution <span class="required">*</span></label>
+                        <input type="text" id="university" name="university" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="major">Field of Study/Major <span class="required">*</span></label>
+                            <input type="text" id="major" name="major" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cgpa">CGPA/GPA <span class="required">*</span></label>
+                            <input type="text" id="cgpa" name="cgpa" placeholder="e.g., 3.5/4.0" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="programType">Program Type <span class="required">*</span></label>
+                            <select id="programType" name="program_type" required>
+                                <option value="">Select Program</option>
+                                <option value="postgraduate">Postgraduate Research (Masters/PhD)</option>
+                                <option value="internship">Research Internship (3-6 months)</option>
+                                <option value="fyp">Final Year Project (FYP)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="projectInterest">Project Interest <span class="required">*</span></label>
+                            <select id="projectInterest" name="project_interest" required>
+                                <option value="">Select Project Area</option>
+                                <option value="motor_design_prototyping">Motor design and prototyping</option>
+                                <option value="thermal_study">Thermal study of motors</option>
+                                <option value="vibroacoustics_study">Vibroacoustics study of motors</option>
+                                <option value="drives_power_electronics">Drives and power electronics</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="motivation">Motivation & Research Interests <span class="required">*</span></label>
+                        <textarea id="motivation" name="motivation" rows="4" placeholder="Describe your motivation for joining EMDLab and your specific research interests..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="experience">Relevant Experience & Skills</label>
+                        <textarea id="experience" name="experience" rows="3" placeholder="List any relevant projects, technical skills, programming languages, or research experience..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="timeline">Preferred Start Timeline</label>
+                        <select id="timeline" name="timeline">
+                            <option value="">Select Timeline</option>
+                            <option value="immediate">Within 3 months</option>
+                            <option value="next_semester">Next semester</option>
+                            <option value="next_year">Next academic year</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="consent" name="consent" value="yes" required>
+                        <label for="consent">I consent to being contacted by EMDLab regarding my application and understand that my information will be used for research program evaluation purposes. <span class="required">*</span></label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                </form>
+                
+                <div class="success-message" id="success-message">
+                    <div class="success-icon">✓</div>
+                    <h4>Application Submitted Successfully!</h4>
+                    <p>Thank you for your interest in joining EMDLab. We will review your application and contact you within 1-2 weeks to discuss the next steps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Have questions about our research or application process? We're here to help.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <h4>Email Us</h4>
+                    <p>emdlab@umpsa.edu.my<br>For general inquiries and applications</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <h4>Call Us</h4>
+                    <p>+60 9-424 6034<br>Monday to Friday, 9 AM - 5 PM (MYT)</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h4>Visit Us</h4>
+                    <p>EMDLab, Faculty of Electrical Engineering<br>UMPSA, 26600 Pekan, Pahang, Malaysia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 EMDLab, Universiti Malaysia Pahang Al-Sultan Abdullah. Advancing electromagnetic engineering through research and innovation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop">↑</a>
+
+    <script>
+        // Form submission handler
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            handleFormSubmission(this);
+        });
+        
+        function handleFormSubmission(form) {
+            const submitBtn = form.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            
+            // Collect form data
+            const formData = new FormData(form);
+            
+            // Submit to Formspree
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Show success message
+                    document.getElementById('success-message').classList.add('show');
+                    form.style.display = 'none';
+                    
+                    // Track successful submission
+                    trackFormSubmission(Object.fromEntries(formData.entries()));
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                console.error('Form submission error:', error);
+                alert('There was an error submitting your application. Please try again or contact us directly at emdlab@umpsa.edu.my');
+                
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            });
+        }
+        
+        function trackFormSubmission(formData) {
+            // Add tracking data
+            const submission = {
+                ...formData,
+                timestamp: new Date().toISOString(),
+                source: 'emdlab_standalone_application',
+                page: 'student_opportunities'
+            };
+            
+            // Store locally (replace with your analytics)
+            const submissions = JSON.parse(localStorage.getItem('emdlabApplications') || '[]');
+            submissions.push(submission);
+            localStorage.setItem('emdlabApplications', JSON.stringify(submissions));
+            
+            console.log('EMDLab Application Submitted:', submission);
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Track page engagement
+        console.log('EMDLab Student Opportunities Page Loaded:', {
+            page: 'student_opportunities_standalone',
+            timestamp: new Date().toISOString(),
+            userAgent: navigator.userAgent.substring(0, 100)
+        });
+        
+        // Add subtle animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.querySelectorAll('.project-card, .opportunity-card, .highlight-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
