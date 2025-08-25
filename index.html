@@ -255,9 +255,16 @@
         
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 3rem;
             margin-bottom: 4rem;
+        }
+
+        /* For larger screens, limit to 3 columns max for better layout */
+        @media (min-width: 1200px) {
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
         
         .project-card {
@@ -955,6 +962,14 @@
                     <p>Develop TVET programs with comprehensive hands-on training that bridges theoretical knowledge with real-world manufacturing expertise in induction machine design and testing.</p>
                     <a href="https://azrihizami.github.io/Module.IM/index.html" target="_blank" class="project-link">Example of Project</a>
                 </div>
+
+                <div class="project-card">
+                        <div class="project-icon">📊</div>
+                          <h3>EMDLab Research Overview</h3>
+                        <p>Comprehensive presentation covering our laboratory capabilities, recent research works in SynRM design, thermal analysis, vibroacoustics studies, and available opportunities for students and industry partners.</p>
+                        <a href="images/Slide EMDLab - Intro.pdf" target="_blank" class="project-link">View Research Overview (PDF)</a>
+                </div>
+                
             </div>
         </div>
     </section>
